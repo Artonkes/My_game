@@ -7,34 +7,34 @@ clock = pygame.time.Clock()
 pygame.init()
 screen = pygame.display.set_mode((618,359))
 pygame.display.set_caption("Srty")
-icon = pygame.image.load(image_path + "images/game.png")
+icon = pygame.image.load("images/game.png")
 pygame.display.set_icon(icon)
 
-bg = pygame.image.load(image_path + "images/1670754026.png").convert()
+bg = pygame.image.load("images/1670754026.png").convert()
 
 
-aaa = pygame.image.load(image_path + 'images/player_left/left2.png').convert_alpha()
+aaa = pygame.image.load('images/player_left/left2.png').convert_alpha()
 aaa_list_in_game = []
 
 
 wal_left = [
-    pygame.image.load(image_path + 'images/player_left/left.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_left/left2.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_left/left3.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_left/left4.png').convert_alpha()
+    pygame.image.load('images/player_left/left.png').convert_alpha(),
+    pygame.image.load('images/player_left/left2.png').convert_alpha(),
+    pygame.image.load('images/player_left/left3.png').convert_alpha(),
+    pygame.image.load('images/player_left/left4.png').convert_alpha()
 ]
 
 wal_right = [
-    pygame.image.load(image_path + 'images/player_rigth/rigth.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_rigth/right2.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_rigth/right3.png').convert_alpha(),
-    pygame.image.load(image_path + 'images/player_rigth/right4.png').convert_alpha()
+    pygame.image.load('images/player_rigth/rigth.png').convert_alpha(),
+    pygame.image.load('images/player_rigth/right2.png').convert_alpha(),
+    pygame.image.load('images/player_rigth/right3.png').convert_alpha(),
+    pygame.image.load('images/player_rigth/right4.png').convert_alpha()
 ]
 
 
 pac = 0
 bg_x = 0
-bg_sound = pygame.mixer.Sound(image_path + 'music/atak.mp3')
+bg_sound = pygame.mixer.Sound('music/atak.mp3')
 bg_sound.play()
 
 player_run = 5
@@ -45,10 +45,10 @@ is_jump = False
 jump_count = 8
 
 bullets_type = 5
-bullet = pygame.image.load(image_path + 'images/atata.png').convert()
+bullet = pygame.image.load('images/atata.png').convert()
 bullets = []
 
-label = pygame.font.Font(image_path + 'font/RobotoMono-Bold.ttf', 40)
+label = pygame.font.Font('font/RobotoMono-Bold.ttf', 40)
 lose_label = label.render('You deat', True, ('red'))
 restart_label = label.render('Restart', True, ('white'))
 restart_label_rect = restart_label.get_rect(topleft=(180,200))
